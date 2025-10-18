@@ -2,9 +2,8 @@ import { useState } from 'react'
 import './App.css'
 
 import CardGrid  from './components/CardGrid/CardGrid';
-import Card from './components/card/Card';
-
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +12,7 @@ function App() {
     <>
     <Navbar/>
     <CardGrid/>
+    <Footer/>
     </>
   )
 }
