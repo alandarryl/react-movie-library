@@ -1,0 +1,11 @@
+
+
+
+.card-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 170px;
+    padding-right: 170px;
+    gap: 7px;
+}

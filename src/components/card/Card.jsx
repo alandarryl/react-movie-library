@@ -1,15 +1,14 @@
+import poster from '../../assets/images/suzume.jpg';
+import './Card.css';
 
-
-
-
-
-
-function Card(){
+function Card({movie, title, link}){
 
     return (
-        <div>
-            <img src="#" className="card-image" />
-            <h2>Movie Title</h2>
+        <div className="card" >
+            <a href={link} >
+                <img src={movie} alt='movie poster' className="card-image" />
+                <h2 className='title'>{title} </h2>
+            </a>
         </div>
     )
 };
