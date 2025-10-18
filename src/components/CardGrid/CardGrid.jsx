@@ -1,10 +1,11 @@
-import Card  from './components/card/Card';
+import Card from '../card/Card';
 
 
 function CardGrid(){
 
     return (
         <>
+        <Card/>
         <Card/>
         </>
     )
