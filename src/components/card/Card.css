@@ -11,10 +11,11 @@
     margin-bottom: 14px;
     margin-top: 14px;
     box-shadow: #333 1px 1px 15px;
+    transition: transform 0.3s ease;
 }
 
-.card a:hover{
-    scale: calc(1, -1);
+.card:hover{
+    transform: scale(1.05);
 }
 
 .card .card-image{
