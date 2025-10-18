@@ -1,11 +1,20 @@
 
 
 
-.card-grid{
+/* .card-grid{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 170px;
     padding-right: 170px;
     gap: 7px;
+} */
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
