@@ -33,7 +33,7 @@ function CardGrid(){
             getMovie();
         },[])
         console.log(movieList);
-        let tenMovie = movieList.slice(0,10);
+        let tenMovie = movieList.slice(0,50);
 
     let limitedMovie = movies.slice(0, 10);
 
