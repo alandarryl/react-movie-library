@@ -13,7 +13,7 @@
 .card-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 0.8rem;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;

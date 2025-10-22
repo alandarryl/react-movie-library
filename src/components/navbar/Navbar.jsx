@@ -14,7 +14,8 @@ function Navbar(){
         <nav className="navbar" >
             <h1 className="logo" >Movie Library</h1>
             <form className="search-form" >
-                <input onClick={()=> setIsSearchOpen(true)} placeholder="Search movie ..." />
+                <button onFocus={()=> setIsSearchOpen(true)} >search</button>
+                {/* <input onClick={()=> setIsSearchOpen(true)} placeholder="Search movie ..." /> */}
             </form>
             <Overlay
             isOpen={isSearchOpen}

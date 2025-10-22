@@ -38,18 +38,15 @@ nav .menu-switch{
     display: none;
 }
 
-nav form input, button{
-    height: 39px ;
-}
-
-nav form input{
+nav form button{
     border: none;
     padding: 7px;
-    min-width: 250px;
+    width: 150px;
     border-radius: 7px;
+    transition: hover 0.3s ease;
 }
 
-nav form input:focus{
+nav form button:focus{
     outline: none;
 }
 
@@ -62,8 +59,7 @@ nav form input:focus{
 } */
 
 nav form button:hover{
-    background: #474747;
-    color: #fff;
+    cursor: pointer;
 }
 
 
