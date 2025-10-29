@@ -10,6 +10,23 @@ function Navbar(){
 
     const[isSearchOpen, setIsSearchOpen] = useState(false);
 
+    const[isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const openMenu = () =>{
+        // alert("clicked");
+        let menuSwitch = document.querySelector('.menu-switch');
+        let menu = document.querySelector('.nav-link');
+        if(!isMenuOpen){
+            menu.classList.add('active');
+            menuSwitch.textContent = "close";
+            setIsMenuOpen(true);
+        } else{
+            menu.classList.remove('active');
+            menuSwitch.textContent = "open";
+            setIsMenuOpen(false);
+        }
+    }
+
     return (
         <nav className="navbar" >
             <h1 className="logo" >Movie Library</h1>
@@ -26,7 +43,7 @@ function Navbar(){
                 <li><a>About</a></li>
                 <li><a>contact</a></li>
             </ul>
-            <a className="menu-switch" >open</a>
+            <a className="menu-switch" onClick={openMenu} >Menu</a>
         </nav>
     )
 };
