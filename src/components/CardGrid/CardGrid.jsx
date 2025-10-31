@@ -7,7 +7,7 @@ import './cardgrid.css';
 import { movies } from '../../assets/assets';
 
 
-function CardGrid(){
+function CardGrid({startList, endList}){
 
     const [movieList, setMovieList] = useState([])
     
@@ -33,7 +33,7 @@ function CardGrid(){
             getMovie();
         },[])
         console.log(movieList);
-        let tenMovie = movieList.slice(0,50);
+        let tenMovie = movieList.slice(startList, endList);
 
     let limitedMovie = movies.slice(0, 10);
 

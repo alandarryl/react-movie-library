@@ -19,7 +19,7 @@ function Header() {
             setMovie(json.results);
             const yourNameMovie = json.results.find((m) => m.title.toLowerCase() === "your name.");
             setSelectedMovie(yourNameMovie || json.results[18]);
-            console.log(json.results.length());
+            console.log(json.results.length);
         })
         .catch((err) => console.error("error fetching movie:", err));
     };

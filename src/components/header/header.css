@@ -24,20 +24,52 @@
     text-shadow: 2px 2px 4px #000000;
 }
 
+
 .content .btn{
-    padding: 10px 20px;
-    background-color: #ff5733;
-    width: 50%;
-    margin: auto;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background-color: #1dbf73; /* teal */
+    color: #ffffff;
+    font-weight: 600;
     font-size: 16px;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+    max-width: 240px;
+    width: auto;
+    margin: 0 auto;
 }
 
-.btn:hover{
-    background-color: #ff2e00;
+.content .btn:hover{
+    transform: translateY(-3px);
+    background-color: #17a45e; /* hover darker teal */
+    box-shadow: 0 12px 26px rgba(0,0,0,0.30);
+}
+
+.content .btn:active{
+    transform: translateY(0);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+}
+
+.content .btn:focus{
+    outline: 3px solid rgba(29,191,115,0.18); /* focus using teal tint */
+    outline-offset: 4px;
+}
+
+
+/* responsive */
+@media (max-width: 768px) {
+    .content .btn{
+        width: 70%;
+        max-width: 320px;
+        padding: 10px 18px;
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 768px) {

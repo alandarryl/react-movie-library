@@ -5,6 +5,8 @@ import CardGrid  from './components/CardGrid/CardGrid';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/footer';
 import Header from './components/header/Header';
+import Midsection from './components/MidSection/Midsection';
+
 
 import Movie from './components/Movies/Movie';
 
@@ -15,7 +17,9 @@ function App() {
     <>
     <Navbar/>
     <Header/>
-    <CardGrid/>
+    <CardGrid startList={0} endList={10} />
+    <Midsection/>
+    <CardGrid startList={11} endList={19} />
     <Footer/>
     </>
   )

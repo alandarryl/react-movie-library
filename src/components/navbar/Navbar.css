@@ -31,7 +31,8 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #474747;
+    color: #17a45e;
+    cursor: pointer;
 }
 
 nav .menu-switch{
