@@ -40,7 +40,7 @@ function CardGrid({startList, endList}){
     return (
         <div className='card-grid'>
         {tenMovie.map((movie, index) =>(
-            <Card key={index} title={movie.title} movie={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+            <Card key={index} id={movie.id} title={movie.title} movie={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
         ) )}
         </div>
     )

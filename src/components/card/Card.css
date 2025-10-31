@@ -16,6 +16,11 @@
     transition: all 0.3s ease-in-out;
 }
 
+.card a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .card:hover{
     transform: scale(1.05);
     /* box-shadow: #333 1px 1px 15px; */

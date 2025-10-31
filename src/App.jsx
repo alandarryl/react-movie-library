@@ -7,6 +7,11 @@ import Footer from './components/footer/footer';
 import Header from './components/header/Header';
 import Midsection from './components/MidSection/Midsection';
 
+import Home  from './pages/Home';
+import AllMovies from './pages/AllMovies';
+import MovieDetail from './pages/MovieDetail';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 import Movie from './components/Movies/Movie';
 
@@ -14,16 +19,25 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <Navbar/>
-    <Header/>
-    <CardGrid startList={0} endList={10} />
-    <Midsection/>
-    <CardGrid startList={11} endList={19} />
-    <Footer/>
-    </>
-  )
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/AllMovies' element={<AllMovies />} />
+        <Route path='/movie/:id' element={<MovieDetail />} />
+      </Routes>
+      <Footer/>
+    </Router>
+  );
 }
+
+// function App() {
+//   return (
+//     <div style={{padding:20}}>
+//       <AllMovies />
+//     </div>
+//   );
+// }
 
 export default App
 

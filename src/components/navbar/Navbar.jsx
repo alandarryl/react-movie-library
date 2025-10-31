@@ -4,6 +4,8 @@ import './Navbar.css' ;
 import { useState } from 'react';
 import Overlay from "../../components/overlay/Overlay";
 
+import { Link } from 'react-router-dom';
+
 
 
 function Navbar(){
@@ -29,7 +31,7 @@ function Navbar(){
 
     return (
         <nav className="navbar" >
-            <h1 className="logo" >Movie Library</h1>
+            <h1 className="logo" > <Link to="/" >MovieLib</Link> </h1>
             <form className="search-form" >
                 <button onFocus={()=> setIsSearchOpen(true)} >search</button>
                 {/* <input onClick={()=> setIsSearchOpen(true)} placeholder="Search movie ..." /> */}
@@ -39,9 +41,9 @@ function Navbar(){
             onClose={()=>setIsSearchOpen(false)}
             />
             <ul className="nav-link" >
-                <li><a>All movie</a></li>
-                <li><a>About</a></li>
-                <li><a>contact</a></li>
+                <li><Link to="/AllMovies" >All movie</Link></li>
+                <li><Link>About</Link></li>
+                <li><Link>contact</Link></li>
             </ul>
             <a className="menu-switch" onClick={openMenu} >Menu</a>
         </nav>

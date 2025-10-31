@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom';
 import poster from '../../assets/images/suzume.jpg';
 import './Card.css';
 
-function Card({movie, title, link}){
+function Card({id,movie, title, link}){
 
     return (
         <div className="card" >
-            <a href={link} >
+            <Link to={`/movie/${id}`} >
                 <img src={movie} alt='movie poster' className="card-image" />
                 <h2 className='title'>{title} </h2>
-            </a>
+            </Link>
         </div>
     )
 };
