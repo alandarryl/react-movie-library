@@ -1,0 +1,41 @@
+
+
+
+.header{
+    background: url('../../assets/images/your_name.jpg') no-repeat center center;
+    height: 700px;
+    background-size: cover;
+    color: white;
+    display: flex;
+}
+
+.header .content{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header .content h2{
+    margin: auto;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.content .btn{
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover{
+    background-color: #ff2e00;
+}
+
+
+

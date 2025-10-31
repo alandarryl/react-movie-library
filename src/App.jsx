@@ -4,6 +4,7 @@ import './App.css'
 import CardGrid  from './components/CardGrid/CardGrid';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/footer';
+import Header from './components/header/Header';
 
 import Movie from './components/Movies/Movie';
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
     <Navbar/>
+    <Header/>
     <CardGrid/>
     <Footer/>
     </>
