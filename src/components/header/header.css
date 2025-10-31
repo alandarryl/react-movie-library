@@ -43,6 +43,7 @@
     max-width: 240px;
     width: auto;
     margin: 0 auto;
+    text-decoration: none;
 }
 
 .content .btn:hover{

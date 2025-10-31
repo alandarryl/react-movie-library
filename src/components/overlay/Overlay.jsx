@@ -2,6 +2,7 @@ import './overlay.css';
 import { useState } from 'react';
 
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Overlay({isOpen, onClose}) {
 
@@ -53,13 +54,15 @@ function Overlay({isOpen, onClose}) {
                 <div className='results' >
                     {results.length > 0 ? (
                         results.map((movie) => (
-                            <div key={results.id} className='result-card' >
-                                <img 
-                                    src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                                    alt={movie.title}
-                                />
-                                <p>{movie.title}</p>
-                            </div>
+                            <Link to={`/movie/${movie.id}`} onClick={onClose} >
+                                <div key={results.id} className='result-card' >
+                                    <img 
+                                        src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                                        alt={movie.title}
+                                    />
+                                    <p>{movie.title}</p>
+                                </div>
+                            </Link>
                         ))
                     ) : (
                         query && <p>No results found</p>

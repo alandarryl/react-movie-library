@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './header.css';
 
 import { useEffect, useState } from 'react';
@@ -46,7 +47,7 @@ function Header() {
             <div className='content'>
                 <h2>{selectedMovie?.title} </h2>
                 <p>{shortOverview}</p>
-                <button className="btn" >See More</button>
+                <Link to={`/movie/${selectedMovie?.id}`} className="btn" >See More</Link>
             </div>
         </header>
     )

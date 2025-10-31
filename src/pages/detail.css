@@ -5,3 +5,49 @@ h2{
     color: #fff;
 }
 
+.detail-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.detail-container img{
+    width: 100%;
+    height: 600px;
+    /* background-size: cover; */
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-container .info{
+    max-width: 800px;
+    text-align: center;
+}
+
+.detail-container .info h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.detail-container .info p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .detail-container img{
+        height: auto;
+    }
+
+    .detail-container .info h2{
+        font-size: 28px;
+    }
+
+    .detail-container .info p{
+        font-size: 16px;
+    }
+}
