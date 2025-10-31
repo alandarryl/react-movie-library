@@ -18,7 +18,7 @@
 
 .card:hover{
     transform: scale(1.05);
-    box-shadow: #333 1px 1px 15px;
+    /* box-shadow: #333 1px 1px 15px; */
     cursor: pointer;
 }
 
