@@ -2,7 +2,7 @@
 
 
 .header{
-    background: url('../../assets/images/your_name.jpg') no-repeat center center;
+    /* background: url('../../assets/images/your_name.jpg') no-repeat center center; */
     height: 700px;
     background-size: cover;
     color: white;
@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
 }
 
 .header .content h2{
@@ -26,6 +27,8 @@
 .content .btn{
     padding: 10px 20px;
     background-color: #ff5733;
+    width: 50%;
+    margin: auto;
     color: white;
     border: none;
     border-radius: 5px;
@@ -37,5 +40,19 @@
     background-color: #ff2e00;
 }
 
+@media (max-width: 768px) {
+    .header{
+        height: 500px;
+    }
+
+    .header .content h2{
+        font-size: 30px;
+    }
+
+    .content .btn{
+        width: 70%;
+        font-size: 14px;
+    }
+}
 
 

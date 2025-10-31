@@ -21,4 +21,10 @@ footer .footer-link ul{
     font-size: 17px;
 }
 
+@media (max-width: 768px) {
+    footer .footer-link{
+        flex-direction: column;
+        gap: 25px;
+    }
+}
 
