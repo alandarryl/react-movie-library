@@ -21,7 +21,7 @@ function Footer(){
                 </ul>
             </div>
 
-            <p>All right are own by <a>Jonathan OKANA</a></p>
+            <p className='owner' >All right are own by <a>Jonathan OKANA</a></p>
         </footer>
     )
 };

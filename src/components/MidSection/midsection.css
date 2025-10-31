@@ -1,6 +1,35 @@
 .midsection{
     padding: 20px;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: #222;
     color: #fff;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.midsection .content{
+    max-width: 800px;
+}
+
+.content h3{
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+/* responsive */
+@media (max-width: 768px){
+    .midsection{
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .content h3{
+        font-size: 28px;
+    }
+}  
+
+
