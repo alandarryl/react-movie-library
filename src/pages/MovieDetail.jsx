@@ -44,6 +44,7 @@ function MovieDetails() {
       />
       <div className="info" >
         <h2>{movie.title}</h2>
+        <h3>Original name : {movie.original_title} </h3>
         <p>{movie.overview}</p>
         <p><strong>Date de sortie :</strong> {movie.release_date}</p>
         <p><strong>Note :</strong> ⭐ {movie.vote_average}</p>
