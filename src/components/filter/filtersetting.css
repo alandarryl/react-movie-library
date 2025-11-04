@@ -1,0 +1,95 @@
+
+.filter-setting {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.filter-setting h2{
+    margin: 12px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.filter-setting .filter-selector{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-setting .filter-selector label{
+    font-size: 18px;
+}
+
+.filter-setting .filter-selector select{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.filter-setting .filter-selector select:focus{
+    outline: none;
+    border-color: #1dbf73;
+    box-shadow: 0 0 5px #1dbf73;
+    background-color: #fff;
+}
+
+.filter-setting .filter-selector select option{
+    padding: 10px;
+}
+
+.filter-setting .filter-selector select option:hover{
+    background-color: #1dbf73;
+}
+
+.filter-setting .filter-selector select option:checked{
+    background-color: #1dbf73;
+    color: #fff;
+}
+
+.filter-setting .filter-selector .apply-button button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1dbf73;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.filter-setting .filter-selector .apply-button button:hover{
+    background-color: #17a45e;
+}
+
+@media (max-width: 600px) {
+    .filter-setting {
+        padding: 10px;
+    }
+
+    .filter-setting h2{
+        font-size: 20px;
+    }
+
+    .filter-setting .filter-selector label{
+        font-size: 16px;
+    }
+
+    .filter-setting .filter-selector select{
+        padding: 6px;
+    }
+
+    .filter-setting .filter-selector .apply-button button{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
