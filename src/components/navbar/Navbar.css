@@ -42,12 +42,14 @@ nav ul li a:hover{
 
 nav .menu-switch{
     display: none;
+    font-size: 22px;
+    color: #fff;
 }
 
 nav form button{
     border: none;
     padding: 7px;
-    width: 150px;
+    width: 100px;
     border-radius: 7px;
     transition: hover 0.3s ease;
 }

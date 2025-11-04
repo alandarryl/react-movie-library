@@ -6,6 +6,8 @@ import Overlay from "../../components/overlay/Overlay";
 
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 function Navbar(){
@@ -14,38 +16,30 @@ function Navbar(){
 
     const[isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const openMenu = () =>{
-        // alert("clicked");
-        let menuSwitch = document.querySelector('.menu-switch');
-        let menu = document.querySelector('.nav-link');
-        if(!isMenuOpen){
-            menu.classList.add('active');
-            menuSwitch.textContent = "close";
-            setIsMenuOpen(true);
-        } else{
-            menu.classList.remove('active');
-            menuSwitch.textContent = "open";
-            setIsMenuOpen(false);
-        }
+            // alert("clicked");
+
+    const toggleMenu = () =>{
+        setIsMenuOpen(prev => !prev);
     }
+
+
 
     return (
         <nav className="navbar" >
             <h1 className="logo" > <Link to="/" >MovieLib</Link> </h1>
             <form className="search-form" >
-                <button onFocus={()=> setIsSearchOpen(true)} >search</button>
-                {/* <input onClick={()=> setIsSearchOpen(true)} placeholder="Search movie ..." /> */}
+                <button onFocus={()=> setIsSearchOpen(true)} > <FontAwesomeIcon icon={faSearch} /> </button>
             </form>
             <Overlay
             isOpen={isSearchOpen}
             onClose={()=>setIsSearchOpen(false)}
             />
-            <ul className="nav-link" >
+            <ul className={`nav-link ${isMenuOpen ? "active" : "" } ` } >
                 <li><Link to="/AllMovies" >All movie</Link></li>
                 <li><Link>About</Link></li>
                 <li><Link>contact</Link></li>
             </ul>
-            <a className="menu-switch" onClick={openMenu} >Menu</a>
+            <a className="menu-switch" onClick={ toggleMenu} ><FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} /></a>
         </nav>
     )
 };
