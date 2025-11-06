@@ -2,9 +2,14 @@
 
 
 import "./filtersetting.css";
+import { useState } from "react";
 
 function FilterSetting(){
 
+
+    const [genre, setGenre] = useState("All");
+    const [rating, setRating] = useState("All");
+    const [year, setYear] = useState("All");
 
     return(
         <div className="filter-setting" >
@@ -12,7 +17,7 @@ function FilterSetting(){
             <div className="filter-selector" >
                 <div className="genre" >
                     <label>Filter by Genre:</label>
-                    <select>
+                    <select  onChange={(e)=>setGenre(e.target.value)} >
                         <option>All</option>
                         <option>Action</option>
                         <option>Comedy</option>
@@ -21,7 +26,7 @@ function FilterSetting(){
                 </div>
                 <div className="rating" >
                     <label>Filter by Rating:</label>
-                    <select>
+                    <select  onChange={(e)=>setRating(e.target.value)} >
                         <option>All</option>
                         <option>G</option>
                         <option>PG</option>
@@ -31,7 +36,7 @@ function FilterSetting(){
                 </div>
                 <div className="year" >
                     <label>Filter by Year:</label>
-                    <select>
+                    <select  onChange={(e)=>setYear(e.target.value)} >
                         <option>All</option>
                         <option>2020s</option>
                         <option>2010s</option>
@@ -40,7 +45,7 @@ function FilterSetting(){
                     </select>
                 </div>
                 <div className="apply-button" >
-                    <button>Apply Filters</button>
+                    <button >Apply Filters</button>
                 </div>
             </div>
 
