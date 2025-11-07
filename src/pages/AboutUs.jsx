@@ -11,6 +11,12 @@ function AboutUs() {
         </p>
 
         <p>
+            Note that this project was made by the student of the name <span>Jonathan OKANA </span> 
+            this project was made with the goal to learn and use React, this project allow me to learn and improve
+            i hope you will appreciate and enjoy using it.
+        </p>
+
+        <p>
             This project uses the TMDB (The Movie Database) API to fetch real movie
             data. We don't store or host movies — we simply provide information and
             a clean interface to browse them.
@@ -22,7 +28,7 @@ function AboutUs() {
         </p>
 
         <h2>Contact</h2>
-        <p>Email: contact@movielibrary.com</p>
+        <p>Email: jonathan.okana.dev@gmail.com</p>
         </section>
     );
 }
