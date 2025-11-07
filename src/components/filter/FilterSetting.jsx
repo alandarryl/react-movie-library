@@ -27,6 +27,7 @@ function FilterSetting({setGenre, setRating, setYear}){
                         <option value={10749} >Romance</option>
                         <option value={878} >Science Fiction</option>
                         <option value={14} >Fantasy</option>
+                        <option value={16} >Animation</option>
                     </select>
                 </div>
                 <div className="rating" >

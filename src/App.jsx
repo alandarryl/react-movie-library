@@ -10,6 +10,8 @@ import Midsection from './components/MidSection/Midsection';
 import Home  from './pages/Home';
 import AllMovies from './pages/AllMovies';
 import MovieDetail from './pages/MovieDetail';
+import UpcomingMovies from './pages/UpcomingMovies';
+import AboutUs from './pages/AboutUs';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -25,6 +27,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/AllMovies' element={<AllMovies />} />
         <Route path='/movie/:id' element={<MovieDetail />} />
+        <Route path='/upcoming-movies' element={<UpcomingMovies />} />
+        <Route path='/about-us' element={<AboutUs />} />
       </Routes>
       <Footer/>
     </Router>

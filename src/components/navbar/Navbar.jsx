@@ -36,8 +36,8 @@ function Navbar(){
             />
             <ul className={`nav-link ${isMenuOpen ? "active" : "" } ` } >
                 <li><Link to="/AllMovies" >All movie</Link></li>
-                <li><Link>About</Link></li>
-                <li><Link>contact</Link></li>
+                <li><Link to="/upcoming-movies" >Upcoming Movies</Link></li>
+                <li><Link to={"/about-us"} >About Us</Link></li>
             </ul>
             <a className="menu-switch" onClick={ toggleMenu} ><FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} /></a>
         </nav>
