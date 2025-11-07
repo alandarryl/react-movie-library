@@ -18,20 +18,26 @@ function FilterSetting({setGenre, setRating, setYear}){
                 <div className="genre" >
                     <label>Filter by Genre:</label>
                     <select  onChange={(e)=>setGenre(e.target.value)} >
-                        <option>All</option>
-                        <option>Action</option>
-                        <option>Comedy</option>
-                        <option>Drama</option>
+                        <option value={"all"} >All</option>
+                        {/* Exemples d'IDs TMDB (Action = 28, Comedy = 35, Drama = 18) */}
+                        <option value={28} >Action</option>
+                        <option value={35} >Comedy</option>
+                        <option value={18} >Drama</option>
+                        <option value={27} >Horror</option>
+                        <option value={10749} >Romance</option>
+                        <option value={878} >Science Fiction</option>
+                        <option value={14} >Fantasy</option>
                     </select>
                 </div>
                 <div className="rating" >
                     <label>Filter by Rating:</label>
                     <select  onChange={(e)=>setRating(e.target.value)} >
                         <option>All</option>
-                        <option>G</option>
-                        <option>PG</option>
-                        <option>PG-13</option>
-                        <option>R</option>
+                        <option value={2} >2</option>
+                        <option value={4} >4</option>
+                        <option value={6} >6</option>
+                        <option value={8} >8</option>
+                        <option value={10} >10</option>
                     </select>
                 </div>
                 <div className="year" >
@@ -40,13 +46,16 @@ function FilterSetting({setGenre, setRating, setYear}){
                         <option>All</option>
                         <option>2025s</option>
                         <option>2020s</option>
+                        <option>2015s</option>
                         <option>2010s</option>
+                        <option>2005s</option>
                         <option>2000s</option>
+                        <option>1990s</option>
                     </select>
                 </div>
-                <div className="apply-button" >
+                {/* <div className="apply-button" >
                     <button >Apply Filters</button>
-                </div>
+                </div> */}
             </div>
 
         </div>

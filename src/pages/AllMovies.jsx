@@ -1,71 +1,58 @@
 import React, { useState, useEffect } from 'react';
-
 import MovieCards from '../components/allMoviesCard/MoviesCards';
 import SearchBar from '../components/searchbar/SearchBar';
 import FilterSetting from '../components/filter/FilterSetting';
 import Pagination from '../components/pagination/pagination';
 
+function AllMovies() {
+    const api_key = "5f394899920a1e49322ba143100fd64f";
 
-function AllMovies(){
-
-    // movie state Manipulation
     const [movieList, setMovieList] = useState([]);
-
-
-    // pagination state manipulation
     const [currentPage, setCurrentPage] = useState(1);
 
-    // search state manipulation
-    const [query, setQuery] = useState('');
-    const [searchMovie, setSearchMovie] = useState('');
+  // Search & Filter states
+    const [query, setQuery] = useState(""); 
+    const [genre, setGenre] = useState("all");
+    const [year, setYear] = useState("all");
+    const [rating, setRating] = useState("all");
 
-    // filter state manipulation
-    const [genre, setGenre] = useState(null);
-    const [year, setYear] = useState(null);
-    const [rating, setRating] = useState(null);
+    async function fetchMovies() {
+    let url = "";
 
-    function handleSearch(){
-        // Implement search functionality here
-        console.log("Searching for:", query);
-        setSearchMovie(query);
+    // If searching
+    if (query.trim() !== "") {
+        url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}&page=${currentPage}`;
+    }
+    // Else if filtering
+    else if (genre !== "all" || year !== "all" || rating !== "all") {
+    url = `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&page=${currentPage}`;
 
+    if (genre !== "all") url += `&with_genres=${genre}`;
+    if (year !== "all") url += `&primary_release_year=${year}`;
+    if (rating !== "all") url += `&vote_average.gte=${rating}`;
+    } 
+    else {
+      // Default popular list
+    url = `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&page=${currentPage}`;
     }
 
+    const res = await fetch(url);
+    const data = await res.json();
+    setMovieList(data.results || []);
+    }
 
-        const api_key = "5f394899920a1e49322ba143100fd64f";
-    
-        useEffect(() => {
-            async function fetchMovies() {
-            const res = await fetch(
-                `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=${currentPage}`
-            );
-            const data = await res.json();
-            setMovieList(data.results);
-            }
-    
-            fetchMovies();
-        }, [currentPage]);
+    useEffect(() => {
+        fetchMovies();
+    }, [currentPage, query, genre, year, rating]);
 
-        const filteredMovies = movieList
-            // .filter(movie => { return movie.title.toLowerCase().includes(searchMovie.toLowerCase()) })
-            // .filter(movie =>
-            //     genre ? movie.genre_ids.includes(Number(genre)) : true
-            // )
-            // .filter(movie =>
-            //     year ? movie.release_date?.startsWith(year) : true
-            // )
-            // .filter(movie =>
-            //     rating ? movie.vote_average >= rating : true
-            // );
-
-    return(
-        <>
-            {/* <SearchBar query={query} setQuery={setQuery} handleSearch={handleSearch} />
-            <FilterSetting setGenre={setGenre} setYear={setYear} setRating={setRating} /> */}
-            <MovieCards movieList={filteredMovies} />
-            <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        </>
-    )
+    return (
+    <>
+        <SearchBar query={query} setQuery={setQuery} />
+        <FilterSetting setGenre={setGenre} setYear={setYear} setRating={setRating} />
+        <MovieCards movieList={movieList} />
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+    </>
+    );
 }
 
 export default AllMovies;
