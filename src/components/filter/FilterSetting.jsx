@@ -4,12 +4,12 @@
 import "./filtersetting.css";
 import { useState } from "react";
 
-function FilterSetting(){
+function FilterSetting({setGenre, setRating, setYear}){
 
 
-    const [genre, setGenre] = useState("All");
-    const [rating, setRating] = useState("All");
-    const [year, setYear] = useState("All");
+    // const [genre, setGenre] = useState("All");
+    // const [rating, setRating] = useState("All");
+    // const [year, setYear] = useState("All");
 
     return(
         <div className="filter-setting" >
@@ -38,10 +38,10 @@ function FilterSetting(){
                     <label>Filter by Year:</label>
                     <select  onChange={(e)=>setYear(e.target.value)} >
                         <option>All</option>
+                        <option>2025s</option>
                         <option>2020s</option>
                         <option>2010s</option>
                         <option>2000s</option>
-                        <option>1990s</option>
                     </select>
                 </div>
                 <div className="apply-button" >
